@@ -1,16 +1,62 @@
-/* Aula inicial :D */
+/*SOFT RESET DO CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
     background-image: url("https://media.istockphoto.com/vectors/abstract-hexagon-background-technology-polygonal-design-digital-vector-id883093072?k=6&m=883093072&s=170667a&w=0&h=QOfvkPoWPffXu1ZwrWpvBkMEE_ZLY1AVjNw7S-OMcSE=");
     background-size: auto 100vh;
     height: 100vh;
-    font-family: Arial;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 12px;
     /*falta implementar filtro*/
+}
+/*Se a tela tiver pelo menos 400 pixels carregue estes estilos*/
+/*breackpoint*/
+@media (min-width : 400px){
+    body{
+        font-size: 14px;
+    }
+}
+
+/*breackpoint*/
+@media (min-width : 600px){
+    body{
+        font-size: 18px;
+    }
+}
+
+/*breackpoint*/
+@media (min-width : 1200px){
+    body{
+        font-size: 22px;
+    }
+}
+
+/*Inclui uma fonte externa*/
+@font-face{
+    font-family: finalf;
+    src: url(./finalf.ttf);
+}
+
+
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:93vh;
 }
 
 .menu{
     background-color: #87CEFA;
     border: 1px solid black;
+    position: fixed;
+    width: 100vw;
+    top: 0; /*So funciona se tiver o position declarado*/
+    z-index: 1;
 }
   
 .menu ul{
@@ -21,23 +67,114 @@ body{
 .menu li{
     list-style: none;
 }
+
+.menu a{
+    display: block;
+    padding: 10px 20px;
+    transition: background-color, color, 0.5s;
+}
   
 a{
     text-decoration: none;
 }
   
-a:hover{
+.menu a:hover{
     text-decoration: underline;
+    background-color: blue;
+    color: #87CEFA;
+}
+
+.titulo{
+    transform: scale(0.2) translateY(50vh);
+    opacity: 0;
+    animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+    100%{
+        transform: scale(1) translateY(0);
+        opacity: 1;
+    }
 }
   
 .site-title, .site-subtitle{
     text-align: center;
     color: blue;
 }
+
+.site-title{
+    font-family: finalf;/*fonte externa*/
+    line-height: 2em;
+}
   
 .site-subtitle{
     font-style: italic;
+    font-family: 'Righteous', cursive;
+    line-height: 1.5em;
 }
+
+.portfolio , .contato{
+    padding: 2em;
+    min-height: 100vh;
+}
+
+.portfolio .grid{
+    display: grid;
+    gap: 2em;
+}
+
+@media (min-width :560px){
+    .portfolio .grid{
+        grid-template-columns: 240px 240px;
+    }
+}
+
+@media (min-width :880px){
+    .portfolio .grid{
+        grid-template-columns: repeat(3,240px);
+        justify-content: center;
+        align-content: center;
+        height: calc(100vh - 40px - 8em);
+    }
+}
+
+.portfolio figure{
+    text-align: center;
+}
+
+.img-portfolio{
+    height: 180px;
+    width: 180px;
+    object-fit: cover;
+    /*object-position: ;*/
+    /*border-radius*/
+    transition: transform, 500ms;
+}
+
+.img-portfolio:hover{
+    transform: scale(1.2);
+}
+
+.portfolio h2 , .contato h2{
+    font-family: 'Righteous', cursive;
+    margin-bottom: 1em;
+}
+
+.contato a{
+    font-size: 4em;
+    color: rgb(4, 6, 124);
+    transition: text-shadow, 1s;
+}
+
+.contato .icons{
+    text-align: center;
+}
+
+.contato a:hover, .contato a:active{
+    text-shadow: 10px 10px rgb(68, 113, 196);
+}
+
+
   
   
   
