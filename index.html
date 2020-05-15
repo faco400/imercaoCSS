@@ -13,7 +13,7 @@
 <body>
     <header>
         <nav class="menu">
-            <ul>
+            <ul class="container">
                 <li><a href="#sobre">Sobre</a></li>
                 <li><a href="#portfolio">Portfólio</a></li>
                 <li><a href="#contato">Contato</a></li>
@@ -25,13 +25,44 @@
             <h2 class="site-subtitle">engenheiro de software</h2>
         </div>
     </header>
-    <section class="portfolio" id="portfolio">
+    <section class="sobre container" id="sobre">
+        <h2>Sobre</h2>
+        <figure class="avatar">
+            <img src="./img/MinhaFoto.jpg" alt="Vinicius">
+        </figure>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, laborum velit molestias, quisquam neque rerum vero perferendis tempora aliquid inventore maiores architecto quae magni porro, error odio maxime sed laboriosam.
+        </p>
+        
+        <p>
+            Ex quasi aliquam quidem obcaecati nostrum, fugit, recusandae odio, hic modi cumque sit quod ipsum doloremque veniam error. Modi dicta harum neque quia asperiores beatae tempore voluptatum possimus adipisci mollitia.
+        </p>
+
+        <p>
+            Id non officiis voluptatum natus nihil! Magni, animi! Unde tenetur similique eaque, non nihil cupiditate rem neque expedita dolore omnis quidem! Inventore unde illum eveniet excepturi recusandae quibusdam beatae sunt?
+        </p>
+        
+        <p>
+            Esse site foi criado graças ao <a title="ImerçãoCSS" href="https://www.alura.com.br/imersao-css">ImerçãoCSS da alura.</a>
+        </p>
+        
+    </section>
+    <section class="portfolio container" id="portfolio">
         <h2>Portfólio</h2>
         <div class="grid">
-            <figure>
-                <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
-                <figcaption>eCommerce</figcaption>
-            </figure>
+            
+            <div class="flip_card">
+                <div class="card">
+                    <figure class="card_front">
+                        <img class="img-portfolio" src="./img/ecommerce-creditos-s-o-c-i-a-l-c-u-t-unsplash.jpg" alt="eCommerce">
+                        <figcaption>eCommerce</figcaption>
+                    </figure>
+                    <div class="card_back">
+                        Oi sou a parte de tras :)
+                    </div>    
+                </div>
+            </div>
+            
             <figure>
                 <img class="img-portfolio" src="./img/mobile-creditos-nate-grant-unsplash.jpg" alt=">Mobile">
                 <figcaption>Mobile</figcaption>
@@ -47,7 +78,7 @@
             </figure>
         </div>
     </section>
-    <section class="contato" id="contato">
+    <section class="contato container" id="contato">
         <h2>Contato</h2>
           <div class="grid icons">
           <a target="_blank" href="https://github.com/faco400">

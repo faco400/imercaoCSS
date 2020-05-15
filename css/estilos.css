@@ -113,10 +113,47 @@ a{
     line-height: 1.5em;
 }
 
-.portfolio , .contato{
+.portfolio , .contato, .sobre{
     padding: 2em;
     min-height: 100vh;
 }
+
+@media(min-width: 1200px){
+    container{
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;   
+    }
+}
+
+.sobre p{
+    text-indent: 2cm;
+    margin-bottom: 0.5cm;
+    text-align: justify;
+}
+
+.sobre a{
+    color: blue;   
+}
+
+.sobre a:hover{
+    text-decoration: underline;
+    color: cyan;
+    background-color: blue;
+
+}
+
+.sobre .avatar img{
+    height: 240px;
+    width: 200px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.sobre .avatar{
+    float: right;
+    margin-left: 2em;
+}
+
 
 .portfolio .grid{
     display: grid;
@@ -151,9 +188,40 @@ a{
     transition: transform, 500ms;
 }
 
+.flip_card{
+    /*background-color: blueviolet; (pra ver)*/
+    perspective: 500px;
+}
+
+.card{
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 2s;
+}
+
+.flip_card:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card_front, .card_back{
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.card_back{
+    background-color: red;
+    height: 180px;
+    width: 180px;
+    transform: rotateY(180deg);
+}
+
+/*
 .img-portfolio:hover{
     transform: scale(1.2);
 }
+*/
 
 .portfolio h2 , .contato h2{
     font-family: 'Righteous', cursive;
